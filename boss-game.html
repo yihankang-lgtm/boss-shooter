@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Shooter — Dodge & Destroy</title>
+    <link rel="stylesheet" href="boss-game.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>⚡ Boss Shooter</h1>
+            <div class="boss-health-container">
+                <span class="boss-label">BOSS</span>
+                <div class="boss-health-bar">
+                    <div class="boss-health-fill" id="bossHealthFill"></div>
+                    <div class="boss-health-glow"></div>
+                </div>
+                <span class="boss-health-text" id="bossHealthText">100%</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div class="game-controls">
+            <div class="instructions">
+                <p><strong>Move</strong> — Mouse or Arrow Keys</p>
+                <p><strong>Shoot</strong> — Click or Space</p>
+                <p><strong>Dodge</strong> — Avoid red lasers!</p>
+            </div>
+            <button id="startBtn" class="start-btn">Start Game</button>
+        </div>
+
+        <div class="game-over" id="gameOver" style="display: none;">
+            <h2 id="gameOverTitle">Game Over!</h2>
+            <p id="gameOverMessage">The boss got you.</p>
+            <button id="restartBtn" class="restart-btn">Play Again</button>
+        </div>
+
+        <div class="victory" id="victory" style="display: none;">
+            <h2>Victory!</h2>
+            <p>You destroyed the boss!</p>
+            <button id="victoryRestartBtn" class="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="boss-game.js"></script>
+</body>
+</html>
